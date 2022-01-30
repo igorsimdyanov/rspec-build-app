@@ -1,7 +1,7 @@
 require_relative '../../lib/services/collection_generator'
 
 RSpec.describe Services::CollectionGenerator do
-  describe 'успешно выполняет' do
+  context 'успешно выполняет' do
     let(:array_of_ten_elements) { Services::CollectionGenerator.call(1, 10) }
 
     it 'генерацию массива из диапазона' do
@@ -17,7 +17,7 @@ RSpec.describe Services::CollectionGenerator do
     end
   end
 
-  describe 'возбуждает ошибку' do
+  context 'возбуждает ошибку' do
     it 'если левая граница диапазона больше правой' do
       expect { Services::CollectionGenerator.call(10, 1) }.to raise_error(StandardError)
     end
