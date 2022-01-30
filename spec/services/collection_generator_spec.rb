@@ -1,7 +1,19 @@
 require_relative '../../lib/services/collection_generator'
 
 RSpec.describe Services::CollectionGenerator do
-  context 'успешно выполняет' do
+  context 'при некорректных входных данных:' do
+    xit 'строковые значения' do
+      # ...
+    end
+    xit 'массив' do
+      # ...
+    end
+    xit 'объект' do
+      # ...
+    end
+  end
+
+  context 'успешно выполняет', focus: true do
     let(:array_of_ten_elements) { Services::CollectionGenerator.call(1, 10) }
 
     it 'генерацию массива из диапазона' do
