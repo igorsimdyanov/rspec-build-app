@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../lib/services/collection_generator'
 
 RSpec.describe Services::CollectionGenerator do
