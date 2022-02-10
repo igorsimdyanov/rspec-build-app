@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'Ruby успешно выполняет' do
   it 'сложение двух чисел' do
     expect(2 + 2).to be 4
