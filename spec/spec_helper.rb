@@ -13,6 +13,8 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require_relative 'support/array_builder'
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -48,6 +50,8 @@ RSpec.configure do |config|
   config.alias_example_group_to 'в_контексте'
   config.alias_example_to 'тест'
   config.alias_example_to 'тестируем'
+
+  config.include ArrayBuilder
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
