@@ -14,6 +14,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require_relative 'support/array_builder'
+require_relative 'support/enumerable_shared_examples'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
