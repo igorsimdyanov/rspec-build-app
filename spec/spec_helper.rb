@@ -54,6 +54,10 @@ RSpec.configure do |config|
 
   config.include ArrayBuilder
 
+  config.define_derived_metadata(file_path: /spec\/services/) do |meta|
+    meta[:fast] = true
+  end
+
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
