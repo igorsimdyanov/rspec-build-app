@@ -3,9 +3,7 @@ RSpec.describe 'Матчер match' do
     [
       { name: 'Процессор', price: 40_399 },
       { name: 'Материнская плата', price: 16_999 },
-      { name: 'Видеокарта', price: 55_999 },
-      { name: 'Оперативная память', price: 48_299 },
-      { name: 'SSD', price: 46_499 }
+      { name: 'Видеокарта', price: 55_999 }
     ]
   end
   
