@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 RSpec.describe 'Хэш в Ruby' do
   let(:empty_hash) { {} }
 
   it_behaves_like 'Enumerable', Hash
 
   context 'при обращении к квадратным скобкам' do
-    let(:hsh) { {first: :hello, second: :world } }
+    let(:hsh) { { first: :hello, second: :world } }
 
     it 'можно извлекать значения по ключу' do
       expect(hsh).to respond_to :[]

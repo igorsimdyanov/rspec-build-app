@@ -4,7 +4,6 @@ require_relative '../../lib/services/collection_generator'
 
 RSpec.describe Services::CollectionGenerator do
   context 'когда данные корректные' do
-
     let(:array_of_ten_elements) { Services::CollectionGenerator.call(1, 10) }
 
     it 'генерацию массива из диапазона' do
@@ -20,15 +19,15 @@ RSpec.describe Services::CollectionGenerator do
     end
 
     it 'можно найти случайные значения из диапазона' do
-      expect(service_object 1..100).not_to include array_rand 1..100
+      expect(service_object(1..100)).not_to include array_rand 1..100
     end
   end
 
   context 'когда данные некорректные' do
     it 'если левая граница диапазона больше правой' do
-      expect {
+      expect do
         Services::CollectionGenerator.call(10, 1)
-      }.to raise_error(StandardError)
+      end.to raise_error(StandardError)
     end
   end
 end

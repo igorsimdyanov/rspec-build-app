@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 RSpec.describe 'Встраиваемые матчеры' do
-  let (:products) do
+  let(:products) do
     [
       { name: 'Процессор Intel Core i9-11900KF BOX', price: 40_399 },
       { name: 'Материнская плата GIGABYTE Z590 AORUS PRO AX', price: 16_999 },

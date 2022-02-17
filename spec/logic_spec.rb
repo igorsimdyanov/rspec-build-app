@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'В Ruby' do
   it 'истинные значения' do
     expect(true).to be_truthy
