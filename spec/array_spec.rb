@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'Массив в Ruby' do
   let(:empty_arr) { [] }
 
@@ -19,7 +21,7 @@ RSpec.describe 'Массив в Ruby' do
 
     it 'можно создавать элементы' do
       expect(empty_arr).to respond_to :[]=
-      empty_arr[3] = 15 
+      empty_arr[3] = 15
       expect(empty_arr[3]).to be 15
       expect(empty_arr.size).to be 4
     end

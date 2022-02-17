@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.shared_examples 'Enumerable' do |store_class|
   let(:empty_collection) { store_class.new }
 
@@ -7,5 +9,5 @@ RSpec.shared_examples 'Enumerable' do |store_class|
     it(:select) { expect(empty_collection).to respond_to :select }
     it(:reject) { expect(empty_collection).to respond_to :reject }
     it(:reduce) { expect(empty_collection).to respond_to :reduce }
-  end  
+  end
 end
