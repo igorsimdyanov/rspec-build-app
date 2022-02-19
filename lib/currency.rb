@@ -1,23 +1,20 @@
 require 'open-uri'
+require 'json'
 
 class Currency
   SOURCE = 'https://www.cbr-xml-daily.ru/latest.js'
 
-  class << self
-    def sync
-      @currency ||= JSON.load(open(SOURCE))
-    end
+  attr_reader :currency
 
-    def usd
-      sync unless @currency
+  def initialize(url = SOURCE)
+    @currency = JSON.load(URI.open(url))
+  end
 
-      1 / @currency&.dig('rates', 'USD')
-    end
+  def usd
+    1 / currency&.dig('rates', 'USD')
+  end
 
-    def eur
-      sync unless @currency
-
-      1 / @currency&.dig('rates', 'EUR')
-    end
+  def eur
+    1 / currency&.dig('rates', 'EUR')
   end
 end
