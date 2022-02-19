@@ -1,10 +1,10 @@
 require_relative '../lib/game'
 
 RSpec.describe Game do
-  let(:mario) { double('Mario').as_null_object }  # 1. Подготовка (Arrange)
+  let(:mario) { spy('Mario') }
 
   it :play do
-    described_class.play(mario)                   # 2. Действие (Act)
-    expect(mario).to have_received(:jump)         # 3. Проверка (Assert)
+    described_class.play(mario)
+    expect(mario).to have_received(:jump)
   end
 end
